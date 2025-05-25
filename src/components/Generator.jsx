@@ -35,7 +35,7 @@ const Generator = () => {
             }
             {output &&
                 <div className="flex flex-col gap-3 w-full">
-                    <h1 className="text-xl text-white font-bold ">Generated Text : </h1>
+                    <h2 className="text-xl text-white font-bold ">Generated Text : </h2>
                     <div className="text-white w-full bg-zinc-900 p-3 rounded-md overflow-auto border border-2 border-emerald-600">{output}</div>
                 </div>
             }
