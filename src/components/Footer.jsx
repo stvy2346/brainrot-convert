@@ -12,7 +12,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="w-full bg-black">
+        <footer className="w-full bg-black pb-1">
             <div className="hidden md:block">
                 {/* Bottom Right Button */}
                 <div className="fixed right-0 bottom-0 px-3 z-10">
