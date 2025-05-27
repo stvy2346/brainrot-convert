@@ -27,8 +27,8 @@ const Footer = () => {
                             onClick={handleClick} 
                             className="block cursor-pointer overflow-hidden"
                             style={{
-                                width: '200px',
-                                height: '140px',
+                                width: '170px',
+                                height: '100px',
                             }}
                         >
                             <img
