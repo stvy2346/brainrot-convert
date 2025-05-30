@@ -15,7 +15,7 @@ const Generator = () => {
         }
         setLoading(true);
         setError("");
-        setOutput("a");
+        setOutput("");
 
         const backendUrl = import.meta.env.VITE_BACKEND_URI;
         try{
