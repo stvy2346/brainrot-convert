@@ -19,21 +19,20 @@ const Generator = () => {
 
         const backendUrl = import.meta.env.VITE_BACKEND_URI;
         try{
-            const res = await fetch(`${backendUrl}/api/chat`,{
+            const res = await fetch(`${backendUrl}/convert-text`,{
                 method:"POST",
                 headers:{
                     "Content-Type" : "application/json",
                 },
-                body:JSON.stringify({input: inputText}),
+                body:JSON.stringify({text: inputText}),
             });
 
             const data = await res.json();
 
-            if(data?.choices?.[0]?.message?.content){
-                setOutput(data.choices[0].message.content);
-            }
-            else{
-                setError("No valid response.");
+            if (res.ok && data?.converted_text){
+                setOutput(data.converted_text);
+            } else {
+                setError(data?.error || "No valid response.");
             }
         }catch(err){
             setError("Failed to generate text. Please try again.");
